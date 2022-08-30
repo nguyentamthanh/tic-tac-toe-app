@@ -1,10 +1,11 @@
 import React from "react";
-
-function Box(props) {
+import "./Box.css";
+function Box({ value, onclick }) {
+  const style = value === "X" ? "box x" : "box o";
   return (
-    <div>
-      <div></div>
-    </div>
+    <button className={style} onClick={onclick}>
+      {value}
+    </button>
   );
 }
 
